@@ -1,16 +1,25 @@
-from string import *
-from random import *
+import itertools
+import string
+import random
 
 lowercase   = string.ascii_lowercase # [abc...z]
 uppercase   = string.ascii_uppercase # [ABC...Z]
 numbers     = string.digits          # [0123..9]
 punctuation = string.punctuation     # punctuations like : !/=+#....
-inputPool = lowercase + uppercase + numbers + punctuation
+
+# lowercase and uppdercase should "theoretically" appear 2x more often in the password
+inputPool = lowercase + uppercase + numbers + punctuation + uppercase + lowercase
 
 def generateString(inputlength):
-    passList = sample(inputPool,inputlength)
+    passList = random.sample(inputPool,inputlength)
     password = ""
     for x in passList:
         password += x
     return password
 
+
+def printSample(count = 10, inputLength = 15):
+    for _ in itertools.repeat(None,count):
+        print(generateString(inputLength))
+
+printSample()
