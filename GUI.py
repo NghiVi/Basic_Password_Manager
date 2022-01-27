@@ -1,30 +1,32 @@
 from tkinter import *
-from turtle import left, width
+from tkinter import font
+from turtle import back, color, left, width
 root = Tk()
 
 pass_string = StringVar()
 
-root.title('-- Basic Password App _ Python --') # name of program
-root.resizable(height= True, width=True)
-root.minsize(height=600 , width= 400)
+def ininitializeGUI():
+    root.title('-- Basic Password Generator App _ Python --') # name of program
+    root.resizable(height= True, width=True)
+    root.minsize(height=300 , width= 650)
+    root.configure(background = "LightGoldenrod2")
+    
 
+    lb_main = Label(root, text="PASSWORD GENERATOR", bg="gold", fg="black", font="Tahoma 24 bold")
+    lb_main.grid(row = 0, column = 1 ,columnspan= 4, rowspan= 1)
 
-lb_main = Label(root, text="PASSWORD GENERATOR", bg="orange red", fg="black", font="Tahoma 24 bold")
-lb_main.pack(anchor=CENTER, side = TOP)
+    '''Left panel OPTION buttons'''
+    optionFrame = Frame(root)
+    optionFrame.configure(background="LightGoldenrod2")
+    Button(optionFrame,text = "Create Password", font="12 ",border= 5, bg = "misty rose").pack(side=TOP,pady= 10,fill = X)
+    Button(optionFrame,text = "Reset", font = "12", border= 5, bg = "misty rose").pack(side = TOP,pady= 10, fill = X)
+    Button(optionFrame,text = "Exit", font = "12", border= 5,bg = "orange red").pack(side = TOP,pady= 10, fill = X)
+    optionFrame.grid(row = 1 , column = 0 , rowspan = 4)
 
-lb_length = Label(root, text= "Password Length",font="none 16 bold")
+    Label(root, text = "Length").grid(row = 1 ,column= 1)
+    Label(root, text = "Length").grid(row = 2 ,column= 1)
 
-
-lb_main1 = Label(root, text="Password Length", fg="black", font="Arial 12")
-lb_main1.pack(anchor= W, side = TOP, pady=20)
-
-Entry(root, width=15).pack(side= TOP, pady= 20)
-
-
-
-#lbl2 = Label (root, text="Enter something here:", bg="orange red", fg="white", font="none 12 bold")
-#lbl2.config(anchor=CENTER)
-#lbl2.pack()
+    
 
 
 # To center frame at the center of current desktop screen
@@ -36,5 +38,6 @@ def centerFrame(root):
     y = (root.winfo_screenheight() // 2) - (height// 2)
     root.geometry('{}x{}+{}+{}'.format(width, height, x ,y)) 
 
+ininitializeGUI()
 centerFrame(root)
 root.mainloop()
