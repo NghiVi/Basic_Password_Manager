@@ -2,6 +2,10 @@
 
 Simple overview of use/purpose.
 
+- Demo :
+![alt text](https://github.com/NghiVi/Basic_Password_Manager/blob/main/DemoPic.png)
+
+
 ## Description
 
 An in-depth paragraph about your project and overview of use.
