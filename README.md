@@ -17,7 +17,6 @@ An in-depth paragraph about your project and overview of use.
 
 * Clone this project
 * Execute file GUI.py
-* 
 
 ## Authors
 
