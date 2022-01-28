@@ -2,7 +2,8 @@
 
 Simple overview of use/purpose.
 
-- Demo :
+-Demo :
+
 ![alt text](https://github.com/NghiVi/Basic_Password_Manager/blob/main/DemoPic.png)
 
 
