@@ -10,16 +10,16 @@ punctuation = string.punctuation     # punctuations like : !/=+#....
 # lowercase and uppdercase should "theoretically" appear 2x more often in the password
 inputPool = lowercase + uppercase + numbers + punctuation + uppercase + lowercase
 
-def generateString(inputlength):
+def generateRandomString(inputlength):
     passList = random.sample(inputPool,inputlength)
     password = ""
     for x in passList:
         password += x
     return password
 
-
+# Method for Testing password genration method
 def printSample(count = 10, inputLength = 15):
     for _ in itertools.repeat(None,count):
-        print(generateString(inputLength))
+        print(generateRandomString(inputLength))
 
-printSample()
+#printSample()
