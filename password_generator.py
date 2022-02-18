@@ -2,9 +2,9 @@ import itertools
 import string
 import random
 
-lowercase   = string.ascii_lowercase # [abc...z]
-uppercase   = string.ascii_uppercase # [ABC...Z]
-numbers     = string.digits          # [0123..9]
+lowercase   = string.ascii_lowercase # [a-z]
+uppercase   = string.ascii_uppercase # [A-Z]
+numbers     = string.digits          # [0-9]
 punctuation = string.punctuation     # punctuations like : !/=+#....
 
 # lowercase and uppdercase should "theoretically" appear 2x more often in the password
